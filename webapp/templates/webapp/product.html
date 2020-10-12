@@ -1,0 +1,43 @@
+{% extends "webapp/base.html" %}
+{% block title %}Produits{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/product.css' %}" rel="stylesheet" />
+<section class="product_top" style="background-image: url({{ product.product_img }});">
+    <div class="product_top_text">
+        <h1>
+            {{ product.product_name }}
+        </h1>
+    </div>
+</section>
+<div class="product_background">
+    <div class="product_body">
+        <div class="nutriscore_box col-md-6" style="float: left;">
+            <div class="nutriscore_char">
+                <img class="nutri_png" src="{% static 'webapp/img/' %}nutri{{ product.product_nutriscore}}.png"
+                    title="nutriscore" alt="nutriscore {{ product.product_nutriscore }}" />
+            </div>
+
+        </div>
+        <div class="nutriment_box col-md-6" style="float: left;">
+            <div class="nutri_values">
+                <div>Valeur énergetiques pour 100g:<br />
+                    Énergie (kJ) : {{ nutriment.nutriments_kj}}kJ<br />
+                    Énergie (kcal) : {{ nutriment.nutriments_kcal}}kcal<br />
+                    Matières grasses / Lipides : {{ nutriment.nutriments_lipids}}g<br />
+                    dont Acides gras saturés : {{ nutriment.nutriments_fat }}g<br />
+                    Glucides : {{ nutriment.nutriments_carbohydrates }}g<br />
+                    dont Sucres : {{ nutriment.nutriments_sugar }}g<br />
+                    Protéines : {{ nutriment.nutriments_protein }}g<br />
+                    Sel : {{ nutriment.nutriments_salt }}g<br />
+                    Sodium : {{ nutriment.nutriments_sodium }}g
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="openfoodlink">
+        <a href="{{ product.product_url }}"><button class="off_button"
+                style="font-family: 'Open Sans', sans-serif;">Voir la fiche d'OpenFoodFacts</button></a>
+    </div>
+    <div class="product_bottom"></div>
+    {% endblock %}

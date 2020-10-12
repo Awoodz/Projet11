@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "../scss/legal.css",
+	"sources": [
+		"../scss/legal.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,mBAAmB,CACnB;EACI,UAAU,EAAE,GAAG;EACf,gBAAgB,EAAE,OAAO;EACzB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;CACjB;;AAED,AAAA,mBAAmB,CACnB;EACI,OAAO,EAAE,UAAU;EACnB,cAAc,EAAE,MAAM;EACtB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,uBAAuB;CACvC"
+}

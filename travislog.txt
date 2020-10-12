@@ -1,0 +1,584 @@
+travis_fold:start:worker_info
+[0K[33;1mWorker information[0m
+hostname: 2159660f-aaab-4b64-a7d2-2d620c28e000@1.worker-com-oss-794dcff96c-ftv2z.gce-production-3
+version: v6.2.17 https://github.com/travis-ci/worker/tree/bc420764f334fe0d096a417c80426f672f1b7d18
+instance: travis-job-0c2ad18e-3b02-487d-940b-3b300e75150b travis-ci-sardonyx-xenial-1593004276-4d46c6b3 (via amqp)
+startup: 6.091566005s
+travis_fold:end:worker_info
+[0Ktravis_time:start:093ec93a
+[0Ktravis_time:end:093ec93a:start=1601476419384999201,finish=1601476419548248302,duration=163249101,event=no_world_writable_dirs
+[0Ktravis_time:start:01d26a28
+[0Ktravis_time:end:01d26a28:start=1601476419551244100,finish=1601476419558300741,duration=7056641,event=setup_filter
+[0Ktravis_time:start:17dd21c8
+[0Ktravis_time:end:17dd21c8:start=1601476419562175099,finish=1601476419573572654,duration=11397555,event=agent
+[0Ktravis_time:start:1c1fb2b8
+[0Ktravis_time:end:1c1fb2b8:start=1601476419577254301,finish=1601476419579856355,duration=2602054,event=check_unsupported
+[0Ktravis_time:start:2acbe317
+[0Ktravis_fold:start:system_info
+[0K[33;1mBuild system information[0m
+Build language: python
+Build dist: xenial
+Build id: 187426288
+Job id: 393165260
+Runtime kernel version: 4.15.0-1077-gcp
+travis-build version: 68cdc09f
+[34m[1mBuild image provisioning date and time[0m
+Wed Jun 24 13:36:52 UTC 2020
+[34m[1mOperating System Details[0m
+Distributor ID:	Ubuntu
+Description:	Ubuntu 16.04.6 LTS
+Release:	16.04
+Codename:	xenial
+[34m[1mSystemd Version[0m
+systemd 229
+[34m[1mCookbooks Version[0m
+3f92a99 https://github.com/travis-ci/travis-cookbooks/tree/3f92a99
+[34m[1mgit version[0m
+git version 2.27.0
+[34m[1mbash version[0m
+GNU bash, version 4.3.48(1)-release (x86_64-pc-linux-gnu)
+[34m[1mgcc version[0m
+gcc (Ubuntu 5.4.0-6ubuntu1~16.04.12) 5.4.0 20160609
+[34m[1mdocker version[0m
+Client:
+ Version:           18.06.0-ce
+ API version:       1.38
+ Go version:        go1.10.3
+ Git commit:        0ffa825
+ Built:             Wed Jul 18 19:11:02 2018
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.06.0-ce
+  API version:      1.38 (minimum version 1.12)
+  Go version:       go1.10.3
+  Git commit:       0ffa825
+  Built:            Wed Jul 18 19:09:05 2018
+  OS/Arch:          linux/amd64
+  Experimental:     false
+[34m[1mclang version[0m
+clang version 7.0.0 (tags/RELEASE_700/final)
+[34m[1mjq version[0m
+jq-1.5
+[34m[1mbats version[0m
+Bats 0.4.0
+[34m[1mshellcheck version[0m
+0.7.0
+[34m[1mshfmt version[0m
+v2.6.3
+[34m[1mccache version[0m
+3.2.4
+[34m[1mcmake version[0m
+cmake version 3.12.4
+[34m[1mheroku version[0m
+heroku/7.42.1 linux-x64 node-v12.16.2
+[34m[1mimagemagick version[0m
+Version: ImageMagick 6.8.9-9 Q16 x86_64 2019-11-12 http://www.imagemagick.org
+[34m[1mmd5deep version[0m
+4.4
+[34m[1mmercurial version[0m
+version 4.8
+[34m[1mmysql version[0m
+mysql  Ver 14.14 Distrib 5.7.30, for Linux (x86_64) using  EditLine wrapper
+[34m[1mopenssl version[0m
+OpenSSL 1.0.2g  1 Mar 2016
+[34m[1mpacker version[0m
+1.3.3
+[34m[1mpostgresql client version[0m
+psql (PostgreSQL) 10.13 (Ubuntu 10.13-1.pgdg16.04+1)
+[34m[1mragel version[0m
+Ragel State Machine Compiler version 6.8 Feb 2013
+[34m[1msudo version[0m
+1.8.16
+[34m[1mgzip version[0m
+gzip 1.6
+[34m[1mzip version[0m
+Zip 3.0
+[34m[1mvim version[0m
+VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Mar 18 2020 14:06:17)
+[34m[1miptables version[0m
+iptables v1.6.0
+[34m[1mcurl version[0m
+curl 7.47.0 (x86_64-pc-linux-gnu) libcurl/7.47.0 GnuTLS/3.4.10 zlib/1.2.8 libidn/1.32 librtmp/2.3
+[34m[1mwget version[0m
+GNU Wget 1.17.1 built on linux-gnu.
+[34m[1mrsync version[0m
+rsync  version 3.1.1  protocol version 31
+[34m[1mgimme version[0m
+v1.5.4
+[34m[1mnvm version[0m
+0.35.3
+[34m[1mperlbrew version[0m
+/home/travis/perl5/perlbrew/bin/perlbrew  - App::perlbrew/0.88
+[34m[1mphpenv version[0m
+rbenv 1.1.2-30-gc879cb0
+[34m[1mrvm version[0m
+rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+[34m[1mdefault ruby version[0m
+ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]
+[34m[1mCouchDB version[0m
+couchdb 1.6.1
+[34m[1mElasticSearch version[0m
+5.5.0
+[34m[1mInstalled Firefox version[0m
+firefox 63.0.1
+[34m[1mMongoDB version[0m
+MongoDB 4.0.19
+[34m[1mPhantomJS version[0m
+2.1.1
+[34m[1mPre-installed PostgreSQL versions[0m
+9.4.26
+9.5.22
+9.6.18
+[34m[1mRedis version[0m
+redis-server 6.0.5
+[34m[1mPre-installed Go versions[0m
+1.11.1
+[34m[1mant version[0m
+Apache Ant(TM) version 1.9.6 compiled on July 20 2018
+[34m[1mmvn version[0m
+Apache Maven 3.6.3 (cecedd343002696d0abb50b32b541b8a6ba2883f)
+[34m[1mgradle version[0m
+Gradle 5.1.1!
+[34m[1mlein version[0m
+Leiningen 2.9.3 on Java 11.0.2 OpenJDK 64-Bit Server VM
+[34m[1mPre-installed Node.js versions[0m
+v10.21.0
+v11.0.0
+v12.18.1
+v4.9.1
+v6.17.1
+v8.12.0
+v8.17.0
+v8.9
+[34m[1mphpenv versions[0m
+  system
+  5.6
+  5.6.40
+  7.1
+  7.1.27
+  7.2
+* 7.2.15 (set by /home/travis/.phpenv/version)
+  hhvm
+  hhvm-stable
+[34m[1mcomposer --version[0m
+Composer version 1.8.4 2019-02-11 10:52:10
+[34m[1mPre-installed Ruby versions[0m
+ruby-2.3.8
+ruby-2.4.5
+ruby-2.5.3
+travis_fold:end:system_info
+[0K
+travis_time:end:2acbe317:start=1601476419584048534,finish=1601476419597933484,duration=13884950,event=show_system_info
+[0Ktravis_time:start:0bcca7ca
+[0Ktravis_time:end:0bcca7ca:start=1601476419601964491,finish=1601476419619764842,duration=17800351,event=rm_riak_source
+[0Ktravis_time:start:012b3c20
+[0Ktravis_time:end:012b3c20:start=1601476419623328327,finish=1601476419629098743,duration=5770416,event=fix_rwky_redis
+[0Ktravis_time:start:23c96e44
+[0Ktravis_time:end:23c96e44:start=1601476419632574586,finish=1601476420066408821,duration=433834235,event=wait_for_network
+[0Ktravis_time:start:1d50f482
+[0Ktravis_time:end:1d50f482:start=1601476420071527781,finish=1601476420312377178,duration=240849397,event=update_apt_keys
+[0Ktravis_time:start:0b88b406
+[0Ktravis_time:end:0b88b406:start=1601476420317631750,finish=1601476420378885881,duration=61254131,event=fix_hhvm_source
+[0Ktravis_time:start:08511070
+[0Ktravis_time:end:08511070:start=1601476420384108664,finish=1601476420387353025,duration=3244361,event=update_mongo_arch
+[0Ktravis_time:start:3a85d298
+[0Ktravis_time:end:3a85d298:start=1601476420392058740,finish=1601476420435689283,duration=43630543,event=fix_sudo_enabled_trusty
+[0Ktravis_time:start:01de2bbb
+[0Ktravis_time:end:01de2bbb:start=1601476420440316238,finish=1601476420442858150,duration=2541912,event=update_glibc
+[0Ktravis_time:start:0a3f4b9c
+[0Ktravis_time:end:0a3f4b9c:start=1601476420446954197,finish=1601476420455498105,duration=8543908,event=clean_up_path
+[0Ktravis_time:start:18c180c7
+[0Ktravis_time:end:18c180c7:start=1601476420459552902,finish=1601476420469109181,duration=9556279,event=fix_resolv_conf
+[0Ktravis_time:start:01603eb2
+[0Ktravis_time:end:01603eb2:start=1601476420473477961,finish=1601476420483024254,duration=9546293,event=fix_etc_hosts
+[0Ktravis_time:start:009e79ff
+[0Ktravis_time:end:009e79ff:start=1601476420487304555,finish=1601476420498340365,duration=11035810,event=fix_mvn_settings_xml
+[0Ktravis_time:start:09af6a40
+[0Ktravis_time:end:09af6a40:start=1601476420503029797,finish=1601476420513051642,duration=10021845,event=no_ipv6_localhost
+[0Ktravis_time:start:0295dee9
+[0Ktravis_time:end:0295dee9:start=1601476420517283471,finish=1601476420520385946,duration=3102475,event=fix_etc_mavenrc
+[0Ktravis_time:start:23c4bdc5
+[0Ktravis_time:end:23c4bdc5:start=1601476420524474339,finish=1601476420528223511,duration=3749172,event=fix_wwdr_certificate
+[0Ktravis_time:start:04d0e1c8
+[0Ktravis_time:end:04d0e1c8:start=1601476420532955241,finish=1601476420558314982,duration=25359741,event=put_localhost_first
+[0Ktravis_time:start:1ee1feee
+[0Ktravis_time:end:1ee1feee:start=1601476420562425163,finish=1601476420566058455,duration=3633292,event=home_paths
+[0Ktravis_time:start:05b8a8f0
+[0Ktravis_time:end:05b8a8f0:start=1601476420569951643,finish=1601476420583430764,duration=13479121,event=disable_initramfs
+[0Ktravis_time:start:02ab1475
+[0Ktravis_time:end:02ab1475:start=1601476420587279323,finish=1601476420960956854,duration=373677531,event=disable_ssh_roaming
+[0Ktravis_time:start:00af6c1e
+[0Ktravis_time:end:00af6c1e:start=1601476420965141819,finish=1601476420968354982,duration=3213163,event=debug_tools
+[0Ktravis_time:start:05835d3d
+[0Ktravis_time:end:05835d3d:start=1601476420973496480,finish=1601476420976999812,duration=3503332,event=uninstall_oclint
+[0Ktravis_time:start:0a6ee808
+[0Ktravis_time:end:0a6ee808:start=1601476420980994128,finish=1601476420985160686,duration=4166558,event=rvm_use
+[0Ktravis_time:start:295fb738
+[0Ktravis_time:end:295fb738:start=1601476420990013537,finish=1601476420998967695,duration=8954158,event=rm_etc_boto_cfg
+[0Ktravis_time:start:0ddad632
+[0Ktravis_time:end:0ddad632:start=1601476421003653766,finish=1601476421007473541,duration=3819775,event=rm_oraclejdk8_symlink
+[0Ktravis_time:start:0c1f4108
+[0Ktravis_time:end:0c1f4108:start=1601476421012367190,finish=1601476421125355706,duration=112988516,event=enable_i386
+[0Ktravis_time:start:0b636c87
+[0Ktravis_time:end:0b636c87:start=1601476421131253138,finish=1601476421137795758,duration=6542620,event=update_rubygems
+[0Ktravis_time:start:0939309c
+[0Ktravis_time:end:0939309c:start=1601476421143038467,finish=1601476421980241452,duration=837202985,event=ensure_path_components
+[0Ktravis_time:start:018e55ef
+[0Ktravis_time:end:018e55ef:start=1601476421985008080,finish=1601476421987907902,duration=2899822,event=redefine_curl
+[0Ktravis_time:start:2879fd6c
+[0Ktravis_time:end:2879fd6c:start=1601476421992743214,finish=1601476422120686246,duration=127943032,event=nonblock_pipe
+[0Ktravis_time:start:1bae5608
+[0Ktravis_time:end:1bae5608:start=1601476422125153014,finish=1601476428159476738,duration=6034323724,event=apt_get_update
+[0Ktravis_time:start:01c50d0a
+[0Ktravis_time:end:01c50d0a:start=1601476428163603546,finish=1601476428166252311,duration=2648765,event=deprecate_xcode_64
+[0Ktravis_time:start:344966c0
+[0Ktravis_time:end:344966c0:start=1601476428171679881,finish=1601476430913484544,duration=2741804663,event=update_heroku
+[0Ktravis_time:start:095d2190
+[0Ktravis_time:end:095d2190:start=1601476430917863067,finish=1601476430920475333,duration=2612266,event=shell_session_update
+[0Ktravis_time:start:074712a4
+[0Ktravis_fold:start:docker_mtu
+[0Ktravis_fold:end:docker_mtu
+[0Ktravis_time:end:074712a4:start=1601476430926268885,finish=1601476433408402803,duration=2482133918,event=set_docker_mtu
+[0Ktravis_time:start:1851bd13
+[0Ktravis_fold:start:resolvconf
+[0Ktravis_fold:end:resolvconf
+[0Ktravis_time:end:1851bd13:start=1601476433413343231,finish=1601476433479695474,duration=66352243,event=resolvconf
+[0Ktravis_time:start:1df3df00
+[0Ktravis_time:end:1df3df00:start=1601476433494865638,finish=1601476433650708704,duration=155843066,event=maven_central_mirror
+[0Ktravis_time:start:020169f2
+[0Ktravis_time:end:020169f2:start=1601476433655358485,finish=1601476433749210250,duration=93851765,event=maven_https
+[0Ktravis_time:start:03a63620
+[0Ktravis_fold:start:services
+[0Ktravis_time:start:198ba894
+[0K$ travis_setup_postgresql
+[33;1mStarting PostgreSQL v9.6[0K
+sudo systemctl start postgresql@9.6-main
+travis_time:end:198ba894:start=1601476433765888587,finish=1601476437100259983,duration=3334371396,event=prepare
+[0Ktravis_fold:end:services
+[0Ktravis_time:end:198ba894:start=1601476433765888587,finish=1601476440105162502,duration=6339273915,event=services
+[0Ktravis_time:start:15e93c4d
+[0Ktravis_time:end:15e93c4d:start=1601476440110107041,finish=1601476440112380607,duration=2273566,event=fix_ps4
+[0Ktravis_fold:start:install_chrome
+[0K$ export CHROME_SOURCE_URL=https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb
+[33;1mInstalling Google Chrome stable[0m
+travis_time:start:082ec0e0
+[0K$ wget --no-verbose -O /tmp/$(basename $CHROME_SOURCE_URL) $CHROME_SOURCE_URL
+2020-09-30 14:34:00 URL:https://dl.google.com/dl/linux/direct/google-chrome-stable_current_amd64.deb [70233788/70233788] -> "/tmp/google-chrome-stable_current_amd64.deb" [1]
+travis_time:end:082ec0e0:start=1601476440159272306,finish=1601476440565450366,duration=406178060,event=prepare
+[0K(Reading database ... 124376 files and directories currently installed.)
+Preparing to unpack .../google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (85.0.4183.121-1) over (83.0.4103.116-1) ...
+Setting up google-chrome-stable (85.0.4183.121-1) ...
+Processing triggers for mime-support (3.59ubuntu1) ...
+Processing triggers for man-db (2.7.5-1) ...
+travis_fold:end:install_chrome
+[0Ktravis_time:start:12ea829c
+[0K
+travis_fold:start:git.checkout
+[0Ktravis_time:start:06576b3e
+[0K$ git clone --depth=50 --branch=master https://github.com/Awoodz/Projet8.git Awoodz/Projet8
+Cloning into 'Awoodz/Projet8'...
+travis_time:end:06576b3e:start=1601476448997105159,finish=1601476449648779419,duration=651674260,event=checkout
+[0K$ cd Awoodz/Projet8
+$ git checkout -qf e0b8c31f829d234f4d9140486b3186c3b632150e
+travis_fold:end:git.checkout
+[0K
+travis_time:end:06576b3e:start=1601476448997105159,finish=1601476449688273416,duration=691168257,event=checkout
+[0Ktravis_time:start:1c9f6e12
+[0K
+[33;1mSetting environment variables from repository settings[0m
+$ export PUR_BEURRE_KEY=[secure]
+
+travis_time:end:1c9f6e12:start=1601476449692542691,finish=1601476449700057459,duration=7514768,event=env
+[0Ktravis_time:start:15bbae58
+[0K$ source ~/virtualenv/python3.6/bin/activate
+travis_time:end:15bbae58:start=1601476449704026631,finish=1601476449712060256,duration=8033625,event=
+[0K$ python --version
+Python 3.6.7
+$ pip --version
+pip 20.1.1 from /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages/pip (python 3.6)
+travis_fold:start:before_install
+[0Ktravis_time:start:0e11461a
+[0K$ google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
+travis_time:end:0e11461a:start=1601476450278055073,finish=1601476450282103801,duration=4048728,event=before_install
+[0Ktravis_fold:end:before_install
+[0Ktravis_fold:start:install.1
+[0Ktravis_time:start:017d232b
+[0K$ wget -N https://chromedriver.storage.googleapis.com/85.0.4183.38/chromedriver_linux64.zip -P ~/
+--2020-09-30 14:34:10--  https://chromedriver.storage.googleapis.com/85.0.4183.38/chromedriver_linux64.zip
+Resolving chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)... 172.253.123.128, 2607:f8b0:400c:c15::80
+Connecting to chromedriver.storage.googleapis.com (chromedriver.storage.googleapis.com)|172.253.123.128|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 5358213 (5.1M) [application/zip]
+Saving to: â€˜/home/travis/chromedriver_linux64.zipâ€™
+
+     0K .......... .......... .......... .......... ..........  0% 72.1M 0s
+    50K .......... .......... .......... .......... ..........  1% 84.7M 0s
+   100K .......... .......... .......... .......... ..........  2% 77.1M 0s
+   150K .......... .......... .......... .......... ..........  3%  110M 0s
+   200K .......... .......... .......... .......... ..........  4% 39.2M 0s
+   250K .......... .......... .......... .......... ..........  5% 46.6M 0s
+   300K .......... .......... .......... .......... ..........  6% 47.0M 0s
+   350K .......... .......... .......... .......... ..........  7% 45.1M 0s
+   400K .......... .......... .......... .......... ..........  8% 34.8M 0s
+   450K .......... .......... .......... .......... ..........  9% 49.0M 0s
+   500K .......... .......... .......... .......... .......... 10% 33.3M 0s
+   550K .......... .......... .......... .......... .......... 11% 77.1M 0s
+   600K .......... .......... .......... .......... .......... 12% 46.9M 0s
+   650K .......... .......... .......... .......... .......... 13% 49.2M 0s
+   700K .......... .......... .......... .......... .......... 14% 39.9M 0s
+   750K .......... .......... .......... .......... .......... 15% 57.4M 0s
+   800K .......... .......... .......... .......... .......... 16% 61.7M 0s
+   850K .......... .......... .......... .......... .......... 17% 85.0M 0s
+   900K .......... .......... .......... .......... .......... 18% 26.1M 0s
+   950K .......... .......... .......... .......... .......... 19% 37.5M 0s
+  1000K .......... .......... .......... .......... .......... 20% 81.8M 0s
+  1050K .......... .......... .......... .......... .......... 21%  157M 0s
+  1100K .......... .......... .......... .......... .......... 21%  135M 0s
+  1150K .......... .......... .......... .......... .......... 22%  145M 0s
+  1200K .......... .......... .......... .......... .......... 23%  129M 0s
+  1250K .......... .......... .......... .......... .......... 24%  123M 0s
+  1300K .......... .......... .......... .......... .......... 25%  111M 0s
+  1350K .......... .......... .......... .......... .......... 26%  115M 0s
+  1400K .......... .......... .......... .......... .......... 27% 83.7M 0s
+  1450K .......... .......... .......... .......... .......... 28% 69.5M 0s
+  1500K .......... .......... .......... .......... .......... 29%  150M 0s
+  1550K .......... .......... .......... .......... .......... 30% 78.6M 0s
+  1600K .......... .......... .......... .......... .......... 31%  125M 0s
+  1650K .......... .......... .......... .......... .......... 32% 61.1M 0s
+  1700K .......... .......... .......... .......... .......... 33%  192M 0s
+  1750K .......... .......... .......... .......... .......... 34% 71.1M 0s
+  1800K .......... .......... .......... .......... .......... 35%  148M 0s
+  1850K .......... .......... .......... .......... .......... 36%  105M 0s
+  1900K .......... .......... .......... .......... .......... 37% 70.8M 0s
+  1950K .......... .......... .......... .......... .......... 38% 46.1M 0s
+  2000K .......... .......... .......... .......... .......... 39% 80.4M 0s
+  2050K .......... .......... .......... .......... .......... 40% 61.2M 0s
+  2100K .......... .......... .......... .......... .......... 41% 49.6M 0s
+  2150K .......... .......... .......... .......... .......... 42% 78.0M 0s
+  2200K .......... .......... .......... .......... .......... 42% 60.5M 0s
+  2250K .......... .......... .......... .......... .......... 43% 75.2M 0s
+  2300K .......... .......... .......... .......... .......... 44% 62.4M 0s
+  2350K .......... .......... .......... .......... .......... 45% 40.6M 0s
+  2400K .......... .......... .......... .......... .......... 46% 42.3M 0s
+  2450K .......... .......... .......... .......... .......... 47% 59.4M 0s
+  2500K .......... .......... .......... .......... .......... 48% 61.7M 0s
+  2550K .......... .......... .......... .......... .......... 49%  236M 0s
+  2600K .......... .......... .......... .......... .......... 50% 75.2M 0s
+  2650K .......... .......... .......... .......... .......... 51% 97.0M 0s
+  2700K .......... .......... .......... .......... .......... 52% 60.4M 0s
+  2750K .......... .......... .......... .......... .......... 53% 72.6M 0s
+  2800K .......... .......... .......... .......... .......... 54% 82.5M 0s
+  2850K .......... .......... .......... .......... .......... 55%  170M 0s
+  2900K .......... .......... .......... .......... .......... 56%  219M 0s
+  2950K .......... .......... .......... .......... .......... 57%  242M 0s
+  3000K .......... .......... .......... .......... .......... 58%  190M 0s
+  3050K .......... .......... .......... .......... .......... 59%  124M 0s
+  3100K .......... .......... .......... .......... .......... 60%  295M 0s
+  3150K .......... .......... .......... .......... .......... 61%  260M 0s
+  3200K .......... .......... .......... .......... .......... 62%  133M 0s
+  3250K .......... .......... .......... .......... .......... 63%  272M 0s
+  3300K .......... .......... .......... .......... .......... 64%  264M 0s
+  3350K .......... .......... .......... .......... .......... 64%  169M 0s
+  3400K .......... .......... .......... .......... .......... 65%  186M 0s
+  3450K .......... .......... .......... .......... .......... 66%  229M 0s
+  3500K .......... .......... .......... .......... .......... 67%  162M 0s
+  3550K .......... .......... .......... .......... .......... 68%  249M 0s
+  3600K .......... .......... .......... .......... .......... 69%  139M 0s
+  3650K .......... .......... .......... .......... .......... 70%  145M 0s
+  3700K .......... .......... .......... .......... .......... 71%  244M 0s
+  3750K .......... .......... .......... .......... .......... 72%  251M 0s
+  3800K .......... .......... .......... .......... .......... 73% 99.4M 0s
+  3850K .......... .......... .......... .......... .......... 74%  210M 0s
+  3900K .......... .......... .......... .......... .......... 75%  331M 0s
+  3950K .......... .......... .......... .......... .......... 76%  233M 0s
+  4000K .......... .......... .......... .......... .......... 77%  267M 0s
+  4050K .......... .......... .......... .......... .......... 78%  135M 0s
+  4100K .......... .......... .......... .......... .......... 79%  262M 0s
+  4150K .......... .......... .......... .......... .......... 80%  343M 0s
+  4200K .......... .......... .......... .......... .......... 81%  263M 0s
+  4250K .......... .......... .......... .......... .......... 82%  113M 0s
+  4300K .......... .......... .......... .......... .......... 83%  207M 0s
+  4350K .......... .......... .......... .......... .......... 84%  209M 0s
+  4400K .......... .......... .......... .......... .......... 85%  207M 0s
+  4450K .......... .......... .......... .......... .......... 85%  209M 0s
+  4500K .......... .......... .......... .......... .......... 86%  335M 0s
+  4550K .......... .......... .......... .......... .......... 87%  150M 0s
+  4600K .......... .......... .......... .......... .......... 88%  209M 0s
+  4650K .......... .......... .......... .......... .......... 89%  253M 0s
+  4700K .......... .......... .......... .......... .......... 90%  211M 0s
+  4750K .......... .......... .......... .......... .......... 91%  274M 0s
+  4800K .......... .......... .......... .......... .......... 92%  209M 0s
+  4850K .......... .......... .......... .......... .......... 93%  159M 0s
+  4900K .......... .......... .......... .......... .......... 94%  267M 0s
+  4950K .......... .......... .......... .......... .......... 95%  275M 0s
+  5000K .......... .......... .......... .......... .......... 96%  211M 0s
+  5050K .......... .......... .......... .......... .......... 97% 55.0M 0s
+  5100K .......... .......... .......... .......... .......... 98%  275M 0s
+  5150K .......... .......... .......... .......... .......... 99%  270M 0s
+  5200K .......... .......... .......... ..                   100%  167M=0.05s
+
+2020-09-30 14:34:10 (93.1 MB/s) - â€˜/home/travis/chromedriver_linux64.zipâ€™ saved [5358213/5358213]
+
+travis_time:end:017d232b:start=1601476450287741030,finish=1601476450367186535,duration=79445505,event=install
+[0Ktravis_fold:end:install.1
+[0Ktravis_fold:start:install.2
+[0Ktravis_time:start:18f60342
+[0K$ unzip ~/chromedriver_linux64.zip -d ~/
+Archive:  /home/travis/chromedriver_linux64.zip
+  inflating: /home/travis/chromedriver  
+travis_time:end:18f60342:start=1601476450374103064,finish=1601476450584312288,duration=210209224,event=install
+[0Ktravis_fold:end:install.2
+[0Ktravis_fold:start:install.3
+[0Ktravis_time:start:024b2992
+[0K$ rm ~/chromedriver_linux64.zip
+travis_time:end:024b2992:start=1601476450594737711,finish=1601476450635832703,duration=41094992,event=install
+[0Ktravis_fold:end:install.3
+[0Ktravis_fold:start:install.4
+[0Ktravis_time:start:31d08b16
+[0K$ PATH=$PATH:~/
+travis_time:end:31d08b16:start=1601476450643641967,finish=1601476450647418954,duration=3776987,event=install
+[0Ktravis_fold:end:install.4
+[0Ktravis_fold:start:install.5
+[0Ktravis_time:start:0c58ccd0
+[0K$ pip install -r requirements.txt
+
+DevTools listening on ws://127.0.0.1:9222/devtools/browser/3e59e211-334f-4945-b163-115484f16284
+Collecting dj-database-url==0.5.0
+  Downloading dj_database_url-0.5.0-py2.py3-none-any.whl (5.5 kB)
+Collecting Django==3.0.8
+  Downloading Django-3.0.8-py3-none-any.whl (7.5 MB)
+Collecting django-debug-toolbar==2.2
+  Downloading django_debug_toolbar-2.2-py3-none-any.whl (198 kB)
+Collecting gunicorn==20.0.4
+  Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+Collecting psycopg2==2.8.5
+  Downloading psycopg2-2.8.5.tar.gz (380 kB)
+Collecting pytz==2020.1
+  Downloading pytz-2020.1-py2.py3-none-any.whl (510 kB)
+Collecting requests==2.24.0
+  Downloading requests-2.24.0-py2.py3-none-any.whl (61 kB)
+Collecting whitenoise==5.1.0
+  Downloading whitenoise-5.1.0-py2.py3-none-any.whl (19 kB)
+Collecting django-heroku==0.3.1
+  Downloading django_heroku-0.3.1-py2.py3-none-any.whl (6.2 kB)
+Collecting dictor==0.1.7
+  Downloading dictor-0.1.7.tar.gz (6.2 kB)
+Collecting django-sass==1.0.0
+  Downloading django_sass-1.0.0-py3-none-any.whl (8.3 kB)
+Collecting django-autocomplete-light==3.5.1
+  Downloading django-autocomplete-light-3.5.1.tar.gz (605 kB)
+Collecting pytest==6.0.1
+  Downloading pytest-6.0.1-py3-none-any.whl (270 kB)
+Collecting pytest-django==3.9.0
+  Downloading pytest_django-3.9.0-py2.py3-none-any.whl (19 kB)
+Collecting Unidecode==1.1.1
+  Downloading Unidecode-1.1.1-py2.py3-none-any.whl (238 kB)
+Collecting selenium==3.141.0
+  Downloading selenium-3.141.0-py2.py3-none-any.whl (904 kB)
+Collecting sqlparse>=0.2.2
+  Downloading sqlparse-0.3.1-py2.py3-none-any.whl (40 kB)
+Collecting asgiref~=3.2
+  Downloading asgiref-3.2.10-py3-none-any.whl (19 kB)
+Requirement already satisfied: setuptools>=3.0 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from gunicorn==20.0.4->-r requirements.txt (line 4)) (47.3.1)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.10-py2.py3-none-any.whl (127 kB)
+Requirement already satisfied: certifi>=2017.4.17 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from requests==2.24.0->-r requirements.txt (line 7)) (2018.10.15)
+Collecting chardet<4,>=3.0.2
+  Downloading chardet-3.0.4-py2.py3-none-any.whl (133 kB)
+Collecting idna<3,>=2.5
+  Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+Collecting libsass
+  Downloading libsass-0.20.1-cp36-abi3-manylinux1_x86_64.whl (9.4 MB)
+Requirement already satisfied: six in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from django-autocomplete-light==3.5.1->-r requirements.txt (line 12)) (1.11.0)
+Collecting iniconfig
+  Downloading iniconfig-1.0.1-py3-none-any.whl (4.2 kB)
+Requirement already satisfied: importlib-metadata>=0.12; python_version < "3.8" in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from pytest==6.0.1->-r requirements.txt (line 13)) (0.18)
+Requirement already satisfied: more-itertools>=4.0.0 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from pytest==6.0.1->-r requirements.txt (line 13)) (4.3.0)
+Collecting py>=1.8.2
+  Downloading py-1.9.0-py2.py3-none-any.whl (99 kB)
+Requirement already satisfied: pluggy<1.0,>=0.12 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from pytest==6.0.1->-r requirements.txt (line 13)) (0.12.0)
+Requirement already satisfied: attrs>=17.4.0 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from pytest==6.0.1->-r requirements.txt (line 13)) (18.2.0)
+Requirement already satisfied: packaging in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from pytest==6.0.1->-r requirements.txt (line 13)) (19.0)
+Collecting toml
+  Downloading toml-0.10.1-py2.py3-none-any.whl (19 kB)
+Requirement already satisfied: zipp>=0.5 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from importlib-metadata>=0.12; python_version < "3.8"->pytest==6.0.1->-r requirements.txt (line 13)) (0.5.1)
+Requirement already satisfied: pyparsing>=2.0.2 in /home/travis/virtualenv/python3.6.7/lib/python3.6/site-packages (from packaging->pytest==6.0.1->-r requirements.txt (line 13)) (2.4.0)
+Building wheels for collected packages: psycopg2, dictor, django-autocomplete-light
+  Building wheel for psycopg2 (setup.py): started
+  Building wheel for psycopg2 (setup.py): finished with status 'done'
+  Created wheel for psycopg2: filename=psycopg2-2.8.5-cp36-cp36m-linux_x86_64.whl size=382797 sha256=729d20acd6d04e03330a5e252831e2ed4ca01a249da0fa4868d956b8acaa5a2e
+  Stored in directory: /home/travis/.cache/pip/wheels/52/9a/ab/22a0d1dc560ad5c0d09cc1c968015f89726e7e01c190dee110
+  Building wheel for dictor (setup.py): started
+  Building wheel for dictor (setup.py): finished with status 'done'
+  Created wheel for dictor: filename=dictor-0.1.7-py3-none-any.whl size=5738 sha256=96dae668f291d1d67f5ad3fcc8a11bd52e7f441f7fc7cc488cc5c425c57a343f
+  Stored in directory: /home/travis/.cache/pip/wheels/a7/a9/d0/8ea6c441de2053f587303e88917818c7562e38c059fa7b47cd
+  Building wheel for django-autocomplete-light (setup.py): started
+  Building wheel for django-autocomplete-light (setup.py): finished with status 'done'
+  Created wheel for django-autocomplete-light: filename=django_autocomplete_light-3.5.1-py3-none-any.whl size=719930 sha256=a248640e89139b8b149b4daf6d4a436a1b1648c2ae242ae52672ed0df866e7d6
+  Stored in directory: /home/travis/.cache/pip/wheels/34/41/c3/e4ac2a5393888ed55b228ea3ce302ef32b798b72d1b90e8bf9
+Successfully built psycopg2 dictor django-autocomplete-light
+Installing collected packages: dj-database-url, sqlparse, pytz, asgiref, Django, django-debug-toolbar, gunicorn, psycopg2, urllib3, chardet, idna, requests, whitenoise, django-heroku, dictor, libsass, django-sass, django-autocomplete-light, iniconfig, py, toml, pytest, pytest-django, Unidecode, selenium
+  Attempting uninstall: py
+    Found existing installation: py 1.7.0
+    Uninstalling py-1.7.0:
+      Successfully uninstalled py-1.7.0
+  Attempting uninstall: pytest
+    Found existing installation: pytest 5.4.3
+    Uninstalling pytest-5.4.3:
+      Successfully uninstalled pytest-5.4.3
+Successfully installed Django-3.0.8 Unidecode-1.1.1 asgiref-3.2.10 chardet-3.0.4 dictor-0.1.7 dj-database-url-0.5.0 django-autocomplete-light-3.5.1 django-debug-toolbar-2.2 django-heroku-0.3.1 django-sass-1.0.0 gunicorn-20.0.4 idna-2.10 iniconfig-1.0.1 libsass-0.20.1 psycopg2-2.8.5 py-1.9.0 pytest-6.0.1 pytest-django-3.9.0 pytz-2020.1 requests-2.24.0 selenium-3.141.0 sqlparse-0.3.1 toml-0.10.1 urllib3-1.25.10 whitenoise-5.1.0
+travis_time:end:0c58ccd0:start=1601476450653095717,finish=1601476469264117203,duration=18611021486,event=install
+[0Ktravis_fold:end:install.5
+[0Ktravis_fold:start:before_script.1
+[0Ktravis_time:start:0667e3e8
+[0K$ psql -c 'create user root;'
+CREATE ROLE
+travis_time:end:0667e3e8:start=1601476469269638439,finish=1601476469286752454,duration=17114015,event=before_script
+[0Ktravis_fold:end:before_script.1
+[0Ktravis_fold:start:before_script.2
+[0Ktravis_time:start:03abd199
+[0K$ psql -c 'ALTER USER root SUPERUSER;'
+ALTER ROLE
+travis_time:end:03abd199:start=1601476469294671910,finish=1601476469308297625,duration=13625715,event=before_script
+[0Ktravis_fold:end:before_script.2
+[0Ktravis_fold:start:before_script.3
+[0Ktravis_time:start:1d8a3dcc
+[0K$ psql -c 'create database pur_beurre;'
+CREATE DATABASE
+travis_time:end:1d8a3dcc:start=1601476469315521931,finish=1601476469435379718,duration=119857787,event=before_script
+[0Ktravis_fold:end:before_script.3
+[0Ktravis_time:start:04ed5fb2
+[0K$ pytest
+============================= test session starts ==============================
+platform linux -- Python 3.6.7, pytest-6.0.1, py-1.9.0, pluggy-0.12.0
+django: settings: pur_beurre_project.settings (from ini)
+rootdir: /home/travis/build/Awoodz/Projet8, configfile: pytest.ini
+plugins: django-3.9.0
+collected 21 items
+
+userapp/test/test_login_view.py .                                        [  4%]
+userapp/test/test_signup_view.py .                                       [  9%]
+webapp/test/test_account_view.py ..                                      [ 19%]
+webapp/test/test_autocomplete_view.py .                                  [ 23%]
+webapp/test/test_index_view.py .                                         [ 28%]
+webapp/test/test_legalmention_view.py .                                  [ 33%]
+webapp/test/test_product_view.py ..                                      [ 42%]
+webapp/test/test_save_product_view.py .                                  [ 47%]
+webapp/test/test_saved_products_view.py ..                               [ 57%]
+webapp/test/test_search_help_view.py .                                   [ 61%]
+webapp/test/test_search_view.py ...                                      [ 76%]
+webapp/test/test_integration.py .                                        [ 80%]
+webapp/utilities/tests/test_openfoodfact_request.py ..                   [ 90%]
+webapp/utilities/tests/test_requester.py ..                              [100%]
+
+============================== 21 passed in 4.25s ==============================
+travis_time:end:04ed5fb2:start=1601476469439752171,finish=1601476474632281780,duration=5192529609,event=script
+[0K[32;1mThe command "pytest" exited with 0.[0m
+
+
+Done. Your build exited with 0.
+/home/travis/.travis/functions: line 536:  4186 Terminated              google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost

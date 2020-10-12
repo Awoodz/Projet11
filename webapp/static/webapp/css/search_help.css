@@ -1,0 +1,140 @@
+.search_help_body {
+  background-color: #DE9440;
+  width: 100%;
+  display: table;
+}
+
+.pb_userform {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.search_help_bot {
+  background-color: #DE9440;
+  width: 100%;
+  display: table;
+  text-align: center;
+}
+
+.result_box {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 1em;
+  text-align: center;
+  height: 25em;
+  width: auto;
+}
+
+.product_img {
+  max-height: 10em;
+  height: auto;
+  max-width: 10em;
+  width: auto;
+  margin: 1em;
+  display: inline-block;
+}
+
+.img_box {
+  background-color: #345A61;
+  margin: 1em;
+  display: inline-block;
+}
+
+.img_score {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.nutriscore_img {
+  position: absolute;
+  z-index: 1;
+  top: -1em;
+  right: -2em;
+  height: auto;
+  width: auto;
+}
+
+.search_help_top {
+  margin-top: 5em;
+  height: 20em;
+  width: 100%;
+  display: table;
+  background-color: #345A61;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search_help_top_text {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.nutriscore_ring {
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  display: table;
+}
+
+.nutriscore_char {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nutriscore_ring_a {
+  border: 0.5em solid #088A08;
+}
+
+.nutriscore_ring_a .nutriscore_char {
+  color: #088A08;
+}
+
+.nutriscore_ring_b {
+  border: 0.5em solid #9AFE2E;
+}
+
+.nutriscore_ring_b .nutriscore_char {
+  color: #9AFE2E;
+}
+
+.nutriscore_ring_c {
+  border: 0.5em solid #FFBF00;
+}
+
+.nutriscore_ring_c .nutriscore_char {
+  color: #FFBF00;
+}
+
+.nutriscore_ring_d {
+  border: 0.5em solid #C55302;
+}
+
+.nutriscore_ring_d .nutriscore_char {
+  color: #C55302;
+}
+
+.nutriscore_ring_e {
+  border: 0.5em solid #FF0000;
+}
+
+.nutriscore_ring_e .nutriscore_char {
+  color: #FF0000;
+}
+
+.help_title {
+  text-align: center;
+}
+
+.search_help_button {
+  border: none;
+  padding: 0;
+  background: none;
+}
+
+/*# sourceMappingURL=../css/search_help.css.map */

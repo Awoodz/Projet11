@@ -1,0 +1,42 @@
+{% extends "webapp/base.html" %}
+{% block title %}Produits sauvegardés{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/saved_products.css' %}" rel="stylesheet" />
+
+<!-- Top section -->
+<section class="saved_products_top">
+    <div class="saved_products_top_text">
+        <h2>Vos produits sauvegardés</h2>
+    </div>
+</section>
+
+<!-- Result section -->
+<div class="saved_products_body">
+    {% for product in products %}
+    <div class="col-md-4" style="float: left">
+        <!-- image block -->
+        <div class="result_box">
+            <div class="img_box">
+                <div class="img_score">
+                    <div>
+                        <a href="{% url 'product' product_id=product.id %}"><img class="product_img"
+                                src="{{ product.product_img }}" title="{{ product }}" alt="{{ product }}" /></a>
+                    </div>
+                    <div class="nutriscore_img">
+                        <div class="nutriscore_ring nutriscore_ring_{{ product.product_nutriscore }}">
+                            <div class="nutriscore_char">
+                                {{ product.product_nutriscore }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="name_box">
+                <h3><a class="product_name" href="{% url 'product' product_id=product.id %}">{{ product }}</a></h3>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
