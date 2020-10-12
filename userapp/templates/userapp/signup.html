@@ -1,0 +1,16 @@
+{% extends 'webapp/base.html' %}
+{% block title %}Sign Up{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/signup.css' %}" rel="stylesheet" />
+<div class="signup_section">
+    <div class="signup_form">
+        <h2>Sign up</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" value="signup">Sign up</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

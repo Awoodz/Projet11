@@ -1,0 +1,35 @@
+.account_top
+{
+    margin-top: 5em;
+    background-color: #DE9440;
+    height: 20em;
+    width: 100%;
+    display: table;
+    background-image: url(../img/photo2.jpg);
+}
+
+.account_top_text
+{
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.account_bottom
+{
+    background-color: #E8A75D;
+    height: 20em;
+    width: 100%;
+    display: table;
+}
+
+.account_bottom_text
+{
+    color: black;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}

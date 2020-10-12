@@ -1,0 +1,16 @@
+.legal_mention_body {
+  margin-top: 5em;
+  background-color: #DE9440;
+  height: 40em;
+  width: 100%;
+  display: table;
+}
+
+.legal_mention_text {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Scope One", sans-serif;
+}
+
+/*# sourceMappingURL=../css/legal.css.map */
