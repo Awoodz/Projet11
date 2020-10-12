@@ -1,0 +1,71 @@
+{% extends "webapp/base.html" %}
+{% block title %}Assistant recherche{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/search_help.css' %}" rel="stylesheet" />
+
+<!-- Top section -->
+<section class="search_help_top">
+    <div class="search_help_top_text">
+        <h2>"{{ query }}" ? Plusieurs produits peuvent correspondre à votre recherche!</h2>
+    </div>
+</section>
+
+<!-- Result section -->
+<div class="search_help_body">
+    <div class="help_title">
+        {% if products %}
+        <h3>Le produit que vous recherchiez figure t-il parmis les suivants ?</h3><br />
+        <h3>Si oui, cliquez dessus pour trouver des substituts !</h3>
+        {% else %}
+        <h3>Nous n'avons trouvé aucun produit correspondant à votre recherche.</h3>
+        {% endif %}
+    </div>
+    {% for product in products %}
+    <div class="col-md-4" style="float: left">
+        <!-- image block -->
+        <div class="result_box">
+            <div class="img_box">
+                <div class="img_score">
+                    <div>
+                        <form action="/search" method="get">
+                            {% csrf_token %}
+                            <input class="product_img" type="image" src="{{ product.product_img}}" title="{{ product }}"
+                                alt="{{ product }}">
+                            <input type="hidden" value="{{ product.id}}" name="product_search">
+                        </form>
+                    </div>
+                    <div class="nutriscore_img">
+                        <div class="nutriscore_ring nutriscore_ring_{{ product.product_nutriscore }}">
+                            <div class="nutriscore_char">
+                                {{ product.product_nutriscore }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="name_box">
+                <form action="{% url 'search' %}" method="get">
+                    {% csrf_token %}
+                    <button type="submit" class="search_help_button">
+                        <h3>
+                            {{ product }}
+                        </h3>
+                    </button>
+                    <input type="hidden" value="{{ product.id}}" name="product_search">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<div class="search_help_bot">
+    <div class="pb_userform">
+        <h3>N'hésitez pas à utiliser notre barre de recherche :</h3>
+        {% include "webapp/search_form.html" %}
+    </div>
+</div>
+{% endblock %}

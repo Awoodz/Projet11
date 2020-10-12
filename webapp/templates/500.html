@@ -1,0 +1,12 @@
+{% extends 'webapp/base.html' %}
+{% block title %}Erreur 500{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/error.css' %}" rel="stylesheet" />
+<div class="error_section">
+    <div class="error_text">
+        <h2>Oups ! Une erreur s'est produite !</h2>
+        <h3>Erreur 500</h3>
+    </div>
+</div>
+{% endblock %}

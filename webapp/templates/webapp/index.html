@@ -1,0 +1,67 @@
+{% extends "webapp/base.html" %}
+{% block title %}Accueil{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/index.css' %}" rel="stylesheet" />
+<!-- Font Awesome icons (free version)-->
+<!-- <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script> -->
+<!-- About-->
+<section class="page-section bg-primary" id="about">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="pb_title mt-0">Du gras, mais de qualité !</h1>
+                <hr class="divider light my-4" />
+                <h2 class="pb_title mb-4">Trouvez un produit de substitution pour ceux que vous consommez tous les
+                    jours.</h2>
+                <div class="pb_userform">
+                    {% include "webapp/search_form.html" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Services-->
+<section>
+    <div class="container">
+        <h2 class="text-center mt-0">Colette et Remy</h2>
+        <p id="story">Pur Beurre est l'initiative de deux amoureux de la gastronomie française, Colette Tatou et Rémy,
+            que vous avez déjà certainement rencontrés dans notre excellent restaurant Ratatouille. </p>
+        <hr class="divider my-4" />
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <div class="mt-5">
+                    <img id="colette_img" src="{% static 'webapp/img/colette.png' %}" title="colette" alt="colette" />
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="mt-5">
+                    <img id="remy_img" src="{% static 'webapp/img/remy.jpg' %}" title="remy" alt="remy" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact-->
+    <section class="page-section contact_class" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Contactez nous !</h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted mb-5">N'hésitez pas à nous contacter !</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fa fa-phone fa-3x mb-3 text-muted"></i>
+                    <div>00 00 00 00 00</div>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fa fa-envelope fa-3x mb-3 text-muted"></i>
+                    <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                    <a class="d-block" href="mailto:pur_beurre@yourwebsite.com">pur_beurre@yourwebsite.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endblock %}

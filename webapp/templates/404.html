@@ -1,0 +1,12 @@
+{% extends 'webapp/base.html' %}
+{% block title %}Erreur 404{% endblock %}
+{% block content %}
+{% load static %}
+<link href="{% static 'webapp/css/error.css' %}" rel="stylesheet" />
+<div class="error_section">
+    <div class="error_text">
+        <h2>Ce produit n'existe pas !</h2>
+        <h3>Erreur 404</h3>
+    </div>
+</div>
+{% endblock %}

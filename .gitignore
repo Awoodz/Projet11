@@ -1,0 +1,16 @@
+env
+.vscode
+__pycache__/
+essai.py
+fonctions_temp.py
+webapp/utilities/__pycache__
+userapp/__pycache__
+userapp/migrations/__pycache__
+userapp/test/__pycache__
+.coverage
+geckodriver.log
+pur_beurre_project/settings/production.py
+.pytest_cache
+
+
+
