@@ -5,28 +5,21 @@
 <link href="{% static 'webapp/css/saved_products.css' %}" rel="stylesheet" />
 
 <!-- Top section -->
-<section class="saved_products_top">
+<div class="saved_products_top">
     <div class="saved_products_top_text">
         <h2>Vos produits sauvegardés</h2>
         <select id="filter_select">
             <option disabled selected value> -- Filter par nutriscore -- </option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
         </select>
     </div>
-</section>
-
-<script>
-    $(document).on('change', '#filter_select', function () {
-        var filter = $(this).val();
-        console.log(filter);
-    });
-</script>
+</div>
 
 <!-- Result section -->
-<div class="saved_products_body">
+<div class="saved_products_body" id="product_list">
     {% for product in products %}
     <div class="col-md-4" style="float: left">
         <!-- image block -->
@@ -53,4 +46,21 @@
     </div>
     {% endfor %}
 </div>
+
+<script>
+    $(document).on('change', '#filter_select', function () {
+        var nutrichar = $(this).val();
+        $.ajax({
+            type: 'GET',
+            url: "{% url 'saved_products' %}",
+            data: {
+                'nutrichar': nutrichar
+            },
+            success: function (data) {
+                var html = $(data).filter('#product_list').html();
+                $("#product_list").html(html);
+            }
+        })
+    });
+</script>
 {% endblock %}

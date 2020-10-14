@@ -21,7 +21,13 @@ class IndexView(generic.FormView):
     form_class = ProductForm
 
     def get(self, request):
-        return render(request, "webapp/index.html", {"prodform": self.form_class,})
+        return render(
+            request,
+            "webapp/index.html",
+            {
+                "prodform": self.form_class,
+            },
+        )
 
 
 def legal_mention(request):
@@ -43,8 +49,14 @@ def saved_products(request):
     template = loader.get_template("webapp/saved_products.html")
     # set the user as the actual user
     current_user = request.user
-    # filters products with current user id
-    products = Product.objects.filter(user_product=current_user.id)
+    if request.is_ajax():
+        nutrichar = request.GET.get("nutrichar")
+        products = Product.objects.filter(
+            user_product=current_user.id, product_nutriscore=nutrichar
+        )
+    else:
+        # filters products with current user id
+        products = Product.objects.filter(user_product=current_user.id)
     return HttpResponse(template.render({"products": products}, request=request))
 
 
@@ -94,7 +106,10 @@ def search(request):
 
     return HttpResponse(
         template.render(
-            {"searched_product": searched_product, "products": products,},
+            {
+                "searched_product": searched_product,
+                "products": products,
+            },
             request=request,
         )
     )
