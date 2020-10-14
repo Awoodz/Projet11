@@ -8,8 +8,22 @@
 <section class="saved_products_top">
     <div class="saved_products_top_text">
         <h2>Vos produits sauvegardés</h2>
+        <select id="filter_select">
+            <option disabled selected value> -- Filter par nutriscore -- </option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+        </select>
     </div>
 </section>
+
+<script>
+    $(document).on('change', '#filter_select', function () {
+        var filter = $(this).val();
+        console.log(filter);
+    });
+</script>
 
 <!-- Result section -->
 <div class="saved_products_body">
