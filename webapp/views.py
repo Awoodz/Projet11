@@ -51,9 +51,12 @@ def saved_products(request):
     current_user = request.user
     if request.is_ajax():
         nutrichar = request.GET.get("nutrichar")
-        products = Product.objects.filter(
-            user_product=current_user.id, product_nutriscore=nutrichar
-        )
+        if nutrichar == "nofilter":
+            products = Product.objects.filter(user_product=current_user.id)
+        else:
+            products = Product.objects.filter(
+                user_product=current_user.id, product_nutriscore=nutrichar
+            )
     else:
         # filters products with current user id
         products = Product.objects.filter(user_product=current_user.id)
