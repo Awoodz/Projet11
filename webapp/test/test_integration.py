@@ -27,7 +27,7 @@ class MySeleniumTests(StaticLiveServerTestCase):
         cls.selenium.quit()
         super().tearDownClass()
 
-    def test_login(self):
+    def test_login_redirect_to_index(self):
         self.selenium.get("%s%s" % (self.live_server_url, "/accounts/signup/"))
         username_input = self.selenium.find_element_by_name("username")
         username_input.send_keys("testuser")
@@ -51,3 +51,28 @@ class MySeleniumTests(StaticLiveServerTestCase):
             EC.presence_of_element_located((By.CLASS_NAME, "pb_userform"))
         )
         assert self.selenium.current_url == self.live_server_url + "/"
+
+    def test_login_does_not_redirect_to_login(self):
+        self.selenium.get("%s%s" % (self.live_server_url, "/accounts/signup/"))
+        username_input = self.selenium.find_element_by_name("username")
+        username_input.send_keys("testuser")
+        email_input = self.selenium.find_element_by_name("email")
+        email_input.send_keys("testuser@mail.com")
+        password_input = self.selenium.find_element_by_name("password1")
+        password_input.send_keys("testpass1")
+        password_input = self.selenium.find_element_by_name("password2")
+        password_input.send_keys("testpass1")
+        self.selenium.find_element_by_xpath('//button[@value="signup"]').click()
+
+        WebDriverWait(self.selenium, 5).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "login_form"))
+        )
+        username_input = self.selenium.find_element_by_name("username")
+        username_input.send_keys("testuser")
+        password_input = self.selenium.find_element_by_name("password")
+        password_input.send_keys("testpass1")
+        self.selenium.find_element_by_xpath('//button[@value="login"]').click()
+        WebDriverWait(self.selenium, 5).until(
+            EC.presence_of_element_located((By.CLASS_NAME, "pb_userform"))
+        )
+        assert self.selenium.current_url != self.live_server_url + "/login"
