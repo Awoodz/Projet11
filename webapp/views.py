@@ -49,6 +49,7 @@ def saved_products(request):
     template = loader.get_template("webapp/saved_products.html")
     # set the user as the actual user
     current_user = request.user
+    nutriscore_list = Product.objects.filter(user_product=current_user.id).values("product_nutriscore").distinct()
     if request.is_ajax():
         nutrichar = request.GET.get("nutrichar")
         if nutrichar == "nofilter":
@@ -60,7 +61,7 @@ def saved_products(request):
     else:
         # filters products with current user id
         products = Product.objects.filter(user_product=current_user.id)
-    return HttpResponse(template.render({"products": products}, request=request))
+    return HttpResponse(template.render({"products": products, "nutriscore_list": nutriscore_list}, request=request))
 
 
 def product(request, product_id):

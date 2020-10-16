@@ -9,11 +9,11 @@
     <div class="saved_products_top_text">
         <h2>Vos produits sauvegardés</h2>
 
-        <select id="filter_select">
-
-            <option></option>
-
-            <option disabled selected value> -- Filter par nutriscore -- </option>
+        <select id="filter_select" style="text-transform: capitalize;">
+            <option selected value="nofilter"> Aucun filtre </option>
+            {% for nutriscore in nutriscore_list %}
+            <option style="text-transform: uppercase;">{{ nutriscore.product_nutriscore }}</option>
+            {% endfor %}
         </select>
     </div>
 </div>
