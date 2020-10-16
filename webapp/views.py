@@ -49,19 +49,37 @@ def saved_products(request):
     template = loader.get_template("webapp/saved_products.html")
     # set the user as the actual user
     current_user = request.user
-    nutriscore_list = Product.objects.filter(user_product=current_user.id).values("product_nutriscore").distinct()
-    if request.is_ajax():
-        nutrichar = request.GET.get("nutrichar")
-        if nutrichar == "nofilter":
-            products = Product.objects.filter(user_product=current_user.id)
-        else:
-            products = Product.objects.filter(
-                user_product=current_user.id, product_nutriscore=nutrichar
-            )
-    else:
-        # filters products with current user id
+    # filters distinct nutriscore in order to create a filter list in template
+    nutriscore_list = Product.objects.filter(
+        user_product=current_user.id
+    ).values("product_nutriscore").distinct()
+
+    return HttpResponse(template.render(
+        {"nutriscore_list": nutriscore_list, },
+        request=request
+    ))
+
+
+def ajax_saved_products(request):
+    """Filter saved products ajax call"""
+    template = loader.get_template("webapp/saved_products.html")
+    # set the user as the actual user
+    current_user = request.user
+    # filters distinct nutriscore in order to create a filter list in template
+    nutrichar = request.GET.get("nutrichar")
+    if nutrichar == "nofilter":
         products = Product.objects.filter(user_product=current_user.id)
-    return HttpResponse(template.render({"products": products, "nutriscore_list": nutriscore_list}, request=request))
+    else:
+        products = Product.objects.filter(
+            user_product=current_user.id, product_nutriscore=nutrichar
+        )
+    return HttpResponse(
+        template.render(
+            {
+                "products": products,
+            }, request=request
+        )
+    )
 
 
 def product(request, product_id):
@@ -73,7 +91,12 @@ def product(request, product_id):
     nutriment = Nutriments.objects.get(nutriments_product_id=product_id)
 
     return HttpResponse(
-        template.render({"product": product, "nutriment": nutriment}, request=request)
+        template.render(
+            {
+                "product": product,
+                "nutriment": nutriment
+                }, request=request
+        )
     )
 
 
@@ -89,7 +112,9 @@ def search(request):
     # if classic search form is used
     except ValueError:
         # get product with name
-        searched_product = Product.objects.filter(product_name__unaccent__iexact=query)
+        searched_product = Product.objects.filter(
+            product_name__unaccent__iexact=query
+        )
         # if there is more than one result
         if searched_product.count() != 1:
             # redirect to the search help page
@@ -128,7 +153,9 @@ class ProductAutocomplete(autocomplete.Select2QuerySetView):
         request = Product.objects.all().order_by("id")
 
         if self.q:
-            request = request.filter(product_name__unaccent__istartswith=self.q)
+            request = request.filter(
+                product_name__unaccent__istartswith=self.q
+            )
 
         return request
 
@@ -143,11 +170,17 @@ class SearchHelpView(generic.FormView):
         """Find products that can match with user search"""
         query = request.GET.get("query")
         # filter products that contain query
-        products = Product.objects.filter(product_name__unaccent__icontains=query)
+        products = Product.objects.filter(
+            product_name__unaccent__icontains=query
+        )
         return render(
             request,
             "webapp/search_help.html",
-            {"prodform": self.form_class, "query": query, "products": products},
+            {
+                "prodform": self.form_class,
+                "query": query,
+                "products": products
+            },
         )
 
 

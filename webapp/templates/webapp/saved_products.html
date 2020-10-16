@@ -47,20 +47,18 @@
     {% endfor %}
 </div>
 
+<script src="{% static 'webapp/js/nutrifilter.js' %}"></script>
+
 <script>
+    $(document).ready(function () {
+        var nutrichar = "nofilter";
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
+    });
+
     $(document).on('change', '#filter_select', function () {
         var nutrichar = $(this).val();
-        $.ajax({
-            type: 'GET',
-            url: "{% url 'saved_products' %}",
-            data: {
-                'nutrichar': nutrichar
-            },
-            success: function (data) {
-                var html = $(data).filter('#product_list').html();
-                $("#product_list").html(html);
-            }
-        })
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
     });
 </script>
+
 {% endblock %}

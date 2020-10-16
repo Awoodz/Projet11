@@ -17,7 +17,7 @@
 {% endfor %}
 
 <!-- Result section -->
-<div class="search_body">
+<div class="search_body" id="product_list">
     <div style="text-align:center">
         <h3>Vous pouvez remplacer cet aliment par :</h3>
     </div>
@@ -69,10 +69,8 @@
                             dataType: "json",
                             contentType: 'application/json',
                             success: function (response) {
-                                // on successfull creating object
-                                // 1. clear the form.
-                                // $(".save_form").trigger('reset');
-
+                                var html = $(data).filter('#product_list').html();
+                                $("#product_list").html(html);
                             }
                         });
                         return false;
@@ -103,4 +101,19 @@
     {% endfor %}
     {% endif %}
 </div>
+
+<script src="{% static 'webapp/js/nutrifilter.js' %}"></script>
+
+<script>
+    $(document).ready(function () {
+        var nutrichar = "nofilter";
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
+    });
+
+    $(document).on('change', '#filter_select', function () {
+        var nutrichar = $(this).val();
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
+    });
+</script>
+
 {% endblock %}
