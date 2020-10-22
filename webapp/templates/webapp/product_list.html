@@ -1,0 +1,79 @@
+{% if products %}
+{% for product in products %}
+
+<div class="col-md-4" style="float: left">
+    <!-- image block -->
+    <div class="result_box">
+        <div class="img_box">
+            <div class="img_score">
+                <div>
+                    <a href="{% url 'product' product_id=product.id %}"><img class="product_img"
+                            src="{{ product.product_img }}" title="{{ product }}" alt="{{ product }}" /></a>
+                </div>
+                <div class="nutriscore_img">
+                    <div class="nutriscore_ring nutriscore_ring_{{ product.product_nutriscore }}">
+                        <div class="nutriscore_char">
+                            {{ product.product_nutriscore }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="name_box">
+            <h3><a class="product_name" href="{% url 'product' product_id=product.id %}">{{ product }}</a></h3>
+        </div>
+
+
+
+        {% if user.is_authenticated %}
+        <div class="save_box">
+
+            <form class="save_form" onsubmit="ManageSaveFunction(event)">
+                {% csrf_token %}
+                <input type="hidden" name="product_token" value="{{ product.id }}">
+                <button type="submit" name="save_product" class="fa fa-floppy-o search_save_button">
+                    Sauvegarder
+                </button>
+
+            </form>
+            <script>
+                function ManageSaveFunction(event) {
+                    event.preventDefault();
+                    $.ajax({
+                        type: 'GET',
+                        url: "{% url 'save_product' %}",
+                        data: "product_token=" + $(event.currentTarget).find("input[name='product_token']").val(),
+                        dataType: "json",
+                        contentType: 'application/json',
+                        success: function (response) {
+                            var html = $(data).filter('#product_list').html();
+                            $("#product_list").html(html);
+                        }
+                    });
+                    return false;
+                }
+            </script>
+        </div>
+        {% for users in product.user_product.all %}
+        {% if users.id == user.id %}
+        Déja sauvegardé !
+        {% endif %}
+        {% endfor %}
+        {% else %}
+        <div> Connectez vous pour sauvegarder un substitut</div>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+{% else %}
+{% for product in searched_product %}
+<div class="no_result_txt">
+    <h2>Désolé ! Nous n'avons aucune alternative à ce produit !</h2>
+    <div>
+        <h3>En effet, la catégorie ne possède aucun produit avec un meilleur nutriscore que ce dernier
+            <div style="text-transform: uppercase;">({{ product.product_nutriscore }})</div>
+        </h3>
+    </div>
+</div>
+{% endfor %}
+{% endif %}

@@ -201,7 +201,7 @@ def search(request):
 
 
 def ajax_search(request):
-    template = loader.get_template("webapp/search.html")
+    template = loader.get_template("webapp/product_list.html")
     # set the user as the actual user
     nutrichar = request.GET.get("nutrichar")
     query = request.GET.get("search_prod")
