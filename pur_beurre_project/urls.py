@@ -35,6 +35,7 @@ urlpatterns = [
     url(r"^product/(?P<product_id>[0-9]+)/$", views.product, name="product"),
     url(r"^save_product/$", views.save_product, name="save_product"),
     url(r"^ajax_saved_products/", views.ajax_saved_products, name="ajax_saved_products",),
+    url(r"^ajax_search/", views.ajax_search, name="ajax_search",),
 ]
 
-urlpatterns = [url(r"^__debug__/", include(debug_toolbar.urls)),] + urlpatterns
+urlpatterns = [url(r"^__debug__/", include(debug_toolbar.urls)), ] + urlpatterns

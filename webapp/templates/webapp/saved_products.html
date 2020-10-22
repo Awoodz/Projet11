@@ -52,12 +52,12 @@
 <script>
     $(document).ready(function () {
         var nutrichar = "nofilter";
-        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}", "0");
     });
 
     $(document).on('change', '#filter_select', function () {
         var nutrichar = $(this).val();
-        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}");
+        nutriFilter(nutrichar, "{% url 'ajax_saved_products' %}", "0");
     });
 </script>
 
