@@ -32,8 +32,6 @@
     </div>
 </div>
 
-<!-- <script src="{% static 'webapp/js/nutrifilter.js' %}"></script> -->
-
 <script>
     function nutriFilter(nutrichar, urlDjango, searchProd) {
         $.ajax({
@@ -45,7 +43,6 @@
             },
             success: function (data) {
                 console.log(data);
-                // var html = $(data).filter('#product_list').html();
                 $("#product_list").html(data);
             }
         })
